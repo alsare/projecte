@@ -1,0 +1,38 @@
+{
+    "name": "2daw/g06",
+    "description": "Projecte web",
+    "authors": [{
+       "name": "Alex Salado",
+       "email": "alsare@fp.insjoaquimmir.cat"
+    },{
+       "name": "Bruno Saldaña",
+       "email": "brsase@fp.insjoaquimmir.cat"
+    }],
+    "type": "project",
+    "license": "copyleft",
+    "minimum-stability": "dev",
+    "autoload": {
+       "psr-4": {
+           "My\\": "library"
+       }
+    },
+    "require": {
+	"php": "^7.3",
+        "monolog/monolog": "2.x-dev",
+        "phpunit/phpunit": "9.5.x-dev",
+        "alrik11es/cowsayphp": "^1.2"
+    },
+   "scripts": {
+       "hello": [
+           "php ./scripts/hello.php"
+       ],
+       "deps": [
+           "ls ./library",
+           "ls ./vendor"
+       ],
+       "tests": [
+           "./vendor/bin/phpunit tests"
+       ]
+   }
+
+}
