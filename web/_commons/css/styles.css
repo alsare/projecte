@@ -1,0 +1,23 @@
+*{
+    font-family: Consolas,monaco,monospace;
+}
+h2{
+    font-size: 50px;
+    color: orange;
+}
+.boton{
+    background-color: #2271D6;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.fondo{
+    background-color: #eee;
+}
+.botondesplegable{
+    color: #eee;
+}

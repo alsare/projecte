@@ -4,12 +4,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="_commons/css/styles.css" media="screen" />
    <title>Projecte J-Suite</title>
 </head>
-<body class = "fondo">
+<body>
    <header>
-       <h1><a href= <?=$_SERVER['PHP_SELF']?>>Projecte J-Suite</a></h1>
+        <h2>Sign in</h2>
+   <p>Welcome back!</p>
+   <footer>
+
    </header>
    <h2>Homepage</h2>
    <p>My first PHP web app works!</p>
@@ -20,7 +22,7 @@
        <li>IP address: <?= getHostByName(getHostName()) ?></li>
    </ul>
    <footer>
-       <p class = "boton">Curs 2021-22 de 2DAW</p>
+       <p>Curs 2021-22 de 2DAW</p>
    </footer>
 </body>
 </html>
