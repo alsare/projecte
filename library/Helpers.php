@@ -28,13 +28,13 @@ public static function redirect(string $url) : string
        exit();
    }
 
-}
+
 const MAX_FILE_SIZE = 2097152; // 2MB (2*1024*1024 bytes)
  
    // ...
  
-   public static function upload(array $file, string $folder = "") : string 
-   {
+    public static function upload(array $file, string $folder = "") : string
+    {
        if ($file["error"]) {
            throw new \Exception("Upload error with code " . $file["error"]);
        } else if ($file["size"] > self::MAX_FILE_SIZE) {
@@ -51,4 +51,4 @@ const MAX_FILE_SIZE = 2097152; // 2MB (2*1024*1024 bytes)
            }
        }
    }
-
+}
