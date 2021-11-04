@@ -1,23 +1,24 @@
+
 *{
     font-family: Consolas,monaco,monospace;
+    margin: 0%;
 }
-h2{
-    font-size: 50px;
-    color: orange;
-}
-.boton{
-    background-color: #2271D6;
-    border: none;
-    color: #ffffff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-.fondo{
+body{
     background-color: #eee;
 }
-.botondesplegable{
-    color: #eee;
+
+.lefthead button{
+    background-color: #2271D6;
+    border-radius: 10%;
+    text-align: center;
+
+    
+}
+
+.righthead button{
+    border-radius: 10%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #2271D6;
+
 }

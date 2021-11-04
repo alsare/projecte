@@ -51,4 +51,18 @@ const MAX_FILE_SIZE = 2097152; // 2MB (2*1024*1024 bytes)
            }
        }
    }
+public static function flash(string $msg = "") : array
+   {
+       session_start();
+       $list = $_SESSION['flash'] ?? [];
+       if (empty($msg)) {
+           // Getter expires messages
+           unset($_SESSION['flash']);   
+       } else {
+           // Setter adds new messages
+           $list[] = $msg;
+           $_SESSION['flash'] = $list;
+       }
+       return $list;
+   }
 }
