@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="ca">
+<?php
+   My\Helpers::log()->info("Entro a la pàgina d'inici");
+   My\Helpers::log()->debug("Entro a una pàgina", ["page" => basename(__FILE__)]);
+?>
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">

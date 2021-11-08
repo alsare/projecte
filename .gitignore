@@ -5,3 +5,4 @@ composer.lock
 uploads
 config/database.php
 config/mail.php
+logs/app.log
