@@ -4,3 +4,4 @@ composer.phar
 composer.lock
 uploads
 config/database.php
+config/mail.php

@@ -7,15 +7,18 @@ final class MailTest extends TestCase
    {
        $mail = new Mail("Title", "Body");
        $this->assertIsObject($mail);
-  return $mail;
+       return $mail;
    }
    /**
     * @depends testConstructor
     */
    public function testSend(Mail $mail): void
    {
-       $result = $mail->send(["Pep te queremos" => "2daw.equip06@fp.insjoaquimmir.cat "]);
+       $result = $mail->send(
+		    ["Pep te queremos" => "2daw.equip06@fp.insjoaquimmir.cat"],
+            ["jo" => "alsare@fp.insjoaquimmir.cat"]
+        );
        $this->assertTrue($result);
    }
 }
-<?
+?>
