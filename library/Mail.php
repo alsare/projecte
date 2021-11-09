@@ -45,4 +45,3 @@ class Mail {
        $content = "<b>This is a Test Email sent via Gmail SMTP Server using PHP mailer class.</b>";       
    }
 }
-?>
