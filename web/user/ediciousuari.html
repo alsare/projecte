@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="_commons/css/modern-css-reset.css" title="style">
+   <link rel="stylesheet" type="text/css" href="_commons/css/layout.css" title="style">
+   <link rel="stylesheet" type="text/css" href="_commons/css/styles.css" title="style">
+   <link rel="stylesheet" type="text/css" href="_commons/css/components.css" title="style">
+   <title>Projecte J-Suite</title>
+</head>
+<body>
+    <header>
+        <div class = "header_lefthead"><button>|||</button><h1><a href= <?=$_SERVER['PHP_SELF']?>Projecte J-Suite</a></h1></div>
+        <div class= "header_righthead"><button>SIGN IN</button></div>
+    </header>
+    <div class="form">
+        <form action="">
+            <label class="form_leftside" for="name">Nom </label><input class="form_rightside" id="name"><br><br>
+            <label class="form_leftside" for="cognom" >Cognom </label><input class="form_rightside" id="cognom"><br><br>
+            <label class="form_leftside" for="correu" >Correu </label><input class="form_rightside" id="correu"><br><br>
+            <label class="form_leftside" for= "naixement">Data Naixement </label><input class="form_rightside" id="naixement"><br><br>
+            <label class="form_leftside" for="pais" >Pais </label><input class="form_rightside" id="pais"><br><br>
+
+
+            <label class="form_leftside" for="contrasenya">Contrasenya </label><input class="form_rightside" id="contrasenya" type="password"><br><br>
+            <label class="form_leftside" for="confirmar_contrasenya">Confirmar Contrasenya </label><input class="form_rightside" id="confirmar_contrasenya" type="password"><br><br>
+                <br>
+                <label class="form_leftside">Descripció:</label><br>
+                <textarea name = "text_descripció"class="form_rightside" cols="50" rows="10"></textarea><br>
+
+            <input class="form_rightside--boton" type="submit" value="Guardar"><br>
+           
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
