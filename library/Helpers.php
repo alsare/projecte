@@ -16,10 +16,12 @@ class Helpers {
     */
    public static function sayHello($username) {
        return "Hello {$username}";}
+
 public static function url(string $path, bool $ssl = false): string {
        $protocol = $ssl ? "https" : "http";
        return "{$protocol}://localhost/tarda/projecte/web{$path}";
-  	 }
+       }
+       
 public static function render(string $path, array $__params = []) : string 
  {
      ob_start();
