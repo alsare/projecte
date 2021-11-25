@@ -32,7 +32,7 @@ public static function render(string $path, array $__params = []) : string
      return $content;
  }
 public static function redirect(string $url) : string 
-   {
+   { 
        ob_flush(); // use ob_clean() instead to discard previous output 
        header("Location: {$url}");
        exit();
