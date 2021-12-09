@@ -14,6 +14,7 @@ class Helpers {
     *
     * @return string
     */
+<<<<<<< HEAD
     public static function sayHello($username) {
        return "Hello {$username}";
     }
@@ -38,6 +39,32 @@ class Helpers {
         header("Location: {$url}");
         exit();
     }
+=======
+   public static function sayHello($username) {
+       return "Hello {$username}";
+    }
+   
+public static function url(string $path, bool $ssl = false): string {
+       $protocol = $ssl ? "https" : "http";
+       return "{$protocol}://localhost/tarda/projecte/web{$path}";
+       }
+       
+public static function render(string $path, array $__params = []) : string 
+ {
+     ob_start();
+     $root = __DIR__ . "/../web/";
+     include("{$root}/{$path}");
+     $content = ob_get_contents();
+     ob_end_clean();
+     return $content;
+ }
+public static function redirect(string $url) : string 
+   { 
+       ob_flush(); // use ob_clean() instead to discard previous output 
+       header("Location: {$url}");
+       exit();
+   }
+>>>>>>> 56673aefa042919cdfa5d69ddfc8436b46e0486c
 
 
     const MAX_FILE_SIZE = 2097152; // 2MB (2*1024*1024 bytes)

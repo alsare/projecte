@@ -1,10 +1,9 @@
+<?php require_once __DIR__ . "/../../vendor/autoload.php"; ?>
 <!DOCTYPE html>
 <html lang="ca">
 <?= My\Helpers::render("_commons/head.php")?>
 <body>
-    <header>
-        <div class = "header_lefthead"><h1><a href= <?=$_SERVER['PHP_SELF']?>Projecte J-Suite</a></h1></div>
-    </header>
+    <?= My\Helpers::render("_commons/header2.php")?>
     <div class="form">
         <form action="">
             <label class="form_leftside">Contrasenya </label>
