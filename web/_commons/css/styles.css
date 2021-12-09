@@ -5,8 +5,8 @@
 body{
     background-color: #eee;
 }
-header{
-    background-color: #E36B00;
+.head{
+    background-color: #E36B00
 }
 
 
@@ -14,10 +14,10 @@ header{
     background-color: #2271D6;
     border-radius: 10%;
     text-align: center;
-
     
 }
-.header_lefthead a{
+
+.header_head {
     color: white;
 }
 
@@ -28,3 +28,4 @@ header{
     background-color: #2271D6;
 
 }
+
