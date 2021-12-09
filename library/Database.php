@@ -17,7 +17,7 @@ class Database {
     */
    public function __construct()
    {
-       $cnf = include(__DIR__ . "/../config/database.php");
+       $cnf = include(__DIR__ . "/../config/Database.php");
        $this->_dsn = $cnf["driver"].":". implode(";",[
            "host=".$cnf["host"],
            "port=".$cnf["port"],

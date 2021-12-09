@@ -15,8 +15,9 @@ class Helpers {
     * @return string
     */
    public static function sayHello($username) {
-       return "Hello {$username}";}
-
+       return "Hello {$username}";
+    }
+   
 public static function url(string $path, bool $ssl = false): string {
        $protocol = $ssl ? "https" : "http";
        return "{$protocol}://localhost/tarda/projecte/web{$path}";
@@ -86,7 +87,7 @@ public static function flash(string $msg = "") : array
            self::$_logger = new Logger("app");
            // Now add some handlers
            $path = __DIR__ . "/../logs/app.log";
-           self::$_logger->pushHandler(new StreamHandler($path, Logger::DEBUG));
+           //self::$_logger->pushHandler(new StreamHandler($path, Logger::DEBUG));
            self::$_logger->pushHandler(new FirePHPHandler());           
        }
        // Proxy pattern
