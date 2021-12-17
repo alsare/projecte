@@ -1,6 +1,17 @@
-*{
-    margin: 0;
+/* .container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 1.4fr 1.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header_lefthead header_head header_head header_righthead"
+    "a a b b"
+    "c c d d"; 
 }
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
 
 header{
     display:flex;
@@ -56,6 +67,11 @@ header{
     display: flex;
 
 }
+.a { justify-self: center; 
+  align-self: center; 
+  grid-area: a; 
+  width: 100%;
+
 
 
 .header_righthead button{

@@ -11,3 +11,4 @@ return [
        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
    ]
 ];
+//2daw.equip06@fp.insjoaquimmir.cat
