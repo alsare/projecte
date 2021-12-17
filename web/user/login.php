@@ -1,20 +1,30 @@
 <?php require_once __DIR__ . "/../../vendor/autoload.php"; ?>
-<!DOCTYPE html>
-<html>
-<?= My\Helpers::render("_commons/head.php")?>
-<body>
-<?= My\Helpers::render("_commons/header2.php")?>
 
-<div class="form">
-<form action="login_action.php" method = "POST">
-    <label>Sign In</label><br><br>
-    <label>Username:</label><br>
-    <input type="text" name="username" value=""><br>
-    <label>Password:</label><br>
-    <input type="password" name="password" value=""><br><br>
-    <input type="submit" value="Sign In"><br><br>
-    <a href = "iforgot.html" for="forgot">Forgot Password?</a><br><br>
-    <label for="newuser">New User</label><br>
-    <input type="submit" value="Sign In"><br><br>
-</form> 
-</div>
+<!DOCTYPE html>
+<html lang="ca">
+<?= My\Helpers::render("/_commons/head.php", ["subtitle" => "Sign in"]) ?>
+<body>
+    <?= My\Helpers::render("/_commons/header.php") ?>
+    <h2>Sign in</h2>
+    <p>Welcome back!</p>
+    <form name="login" action="<?= My\Helpers::url("/user/login_action.php") ?>" method="POST">
+        <p>
+            <label>Username</label><br>
+            <input type="text" name="username" required>
+        </p>
+        <p>
+            <label>Password</label><br>
+            <input type="password" name="password" required>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="remember">Remember me
+            </label>
+        </p>
+        <p>
+            <button>Sign in</button>
+            <button type="reset">Reset form</button>
+        </p>
+    </form>
+</body>
+</html>

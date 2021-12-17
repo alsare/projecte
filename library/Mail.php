@@ -22,13 +22,15 @@ class Mail {
         $this->_mailer = new PHPMailer();
         $this->_mailer->IsSMTP();
         $this->_mailer->Mailer     = $cnf["server"]["protocol"];
-        $this->_mailer->SMTPDebug  = $cnf["server"]["debug"];
         $this->_mailer->SMTPAuth   = TRUE;
         $this->_mailer->SMTPSecure = $cnf["server"]["security"];
         $this->_mailer->Port       = $cnf["server"]["port"];
         $this->_mailer->Host       = $cnf["server"]["host"];
         $this->_mailer->Username   = $cnf["server"]["username"];
         $this->_mailer->Password   = $cnf["server"]["password"];
+        // Debug options
+        $this->_mailer->SMTPDebug   = $cnf["server"]["debug"]["level"];
+        $this->_mailer->Debugoutput = $cnf["server"]["debug"]["output"];
         // Configure mail contact: from and reply...
         if (isset($cnf["from"])) {
             $this->_mailer->SetFrom($cnf["from"]["mail"], $cnf["from"]["name"]);
