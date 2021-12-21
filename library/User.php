@@ -15,7 +15,7 @@ class User{
 
         return $_COOKIE[self::COOKIE_NAME];
     }
-    public function isAuthenticated(){
+    public function isAuthenticated() : bool{
         if (self::getToken()){
             return true;
 

@@ -5,14 +5,13 @@ use My\User;
 
 final class UserTest extends TestCase
 {
-   public function testUser(): User
+   public function testUser(): Void
    {
-    
-    
-    $cooki = setcookie('session_token', "token", time() + (86400 * 30), "/");
-    User::isAuthenticated($cooki);
+    $logeado = User::isAuthenticated();
+    $this -> assertFalse($logeado);
 
     }
 }
+
 
 
