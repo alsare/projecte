@@ -7,7 +7,10 @@ return [
        "port"      => 587,
        "username"  => "2daw.equip06@fp.insjoaquimmir.cat",
        "password"  => "JXhNR*8J",
-       "debug"     => 1
+       "debug"     => [
+            "level"  => 0,
+            "output" => "error_log"
+       ]
    ],
    "from" => [
        "name"      => "brunoalex",
