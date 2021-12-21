@@ -11,7 +11,6 @@ final class MailTest extends TestCase
         $this->assertIsObject($mail);
         return $mail;
     }
-
     /**
      * @depends testConstructor
      */

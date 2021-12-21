@@ -21,7 +21,7 @@ final class HelpersTest extends TestCase
       $this->assertStringEndsWith("login.php", $https);
     }
   public function testLog(): void
-   {
+   {                             
        $logger = Helpers::log();
        $this->assertIsObject($logger);
        // Calling methods using object or directly works...
