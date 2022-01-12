@@ -1,0 +1,53 @@
+*{
+    font-family: Consolas,monaco,monospace;
+}
+body{
+    background-color:turquoise;
+}
+.aboutme{
+    display: flex;
+    justify-content: center;
+    size: 20px;
+    color: red;
+}
+.divimagen{
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.imagen{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+
+}
+.imagen2{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    opacity: 0;
+}
+.divimagen:hover .imagen{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 3s ease-in-out 0s;
+
+}
+
+.divimagen:hover .imagen2{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 3s ease-in-out 0s;
+    opacity: 1;
+
+}
