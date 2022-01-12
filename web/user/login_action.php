@@ -6,6 +6,7 @@ use Rakit\Validation\Validator;
 use My\Helpers;
 use My\Database;
 use My\Token;
+use My\User;
 
 $url = Helpers::url(""); // Go to homepage
 
@@ -36,7 +37,7 @@ if ($validation->fails()) {
 
 
     try {
-
+        if (User::isAuthenticated()){
         Helpers::log()->debug("Check username and password");
         $db = new Database();
         $sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
@@ -53,6 +54,7 @@ if ($validation->fails()) {
         if ($username = $usersearch) {
 
             Helpers::log()->debug("Username and password OK");
+
 
             $datetime = date('Y-m-d H:i:s');
             $uid = $user["id"];
@@ -89,6 +91,7 @@ if ($validation->fails()) {
             Helpers::log()->debug("Invalid username and password");
             Helpers::flash("Error de credencials. Prova de nou");
         }
+    }
     } catch (PDOException $e) {
         Helpers::log()->debug($e->getMessage());
         Helpers::flash("No s'han pogut enviar les dades. Prova-ho més tard.");
