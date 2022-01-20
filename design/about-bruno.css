@@ -10,7 +10,7 @@ body{
     size: 20px;
     color: red;
 }
-.divimagen{
+#divimagen{
     margin-top: 20%;
     display: flex;
     align-items: center;
@@ -37,14 +37,14 @@ body{
     margin:0 auto;
     opacity: 0;
 }
-.divimagen:hover .imagen{
+#divimagen:hover .imagen{
     cursor: default;
     transform: rotate(360deg);
     transition: all 3s ease-in-out 0s;
 
 }
 
-.divimagen:hover .imagen2{
+#divimagen:hover .imagen2{
     cursor: default;
     transform: rotate(360deg);
     transition: all 3s ease-in-out 0s;

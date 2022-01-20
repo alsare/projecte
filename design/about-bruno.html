@@ -8,11 +8,38 @@
 </head>
 <body>
     <h1 class="aboutme">MEET OUR TEAM</h1>
-<div class="divimagen">
+<div id="divimagen">
     <img class="imagen" src="chinopulgararriba.jpg" alt="">
     <img class="imagen2" src="manitasdepapel.jpeg" alt="">
+    <audio muted id="audio"  controls>
+        <source src="../audio/beep-01a.mp3.mp3" type="audio/mp3">
+    </audio>
 
+<script>
+const audio = document.getElementById("audio")
+const img = document.getElementById("divimagen")
+    
 
+    audio.oncanplaythrough = (event) => {
+
+            console.log("fruta")
+        startPlay();
+    };
+    function startPlay(){
+        img.onmouseenter = () => {
+            console.log("fruta")
+            audio.play().then(_ => {
+                console.log("playing")
+            }).catch((err) => {
+                audio.pause()
+            });
+        }
+        img.onmouseleave = () => {
+            audio.pause();
+            console.log("paused")
+        }
+    }
+</script>
 </div>
 </body>
 </html>
