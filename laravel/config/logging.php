@@ -50,9 +50,23 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['file', 'firephp', 'errorlog'],
             'ignore_exceptions' => false,
         ],
+
+        'file' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/laravel.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+
+        'firephp' => [
+            'driver' => 'monolog',
+            'handler' => Monolog\Handler\FirePHPHandler::class,
+        ],
+ 
+ 
+ 
 
         'single' => [
             'driver' => 'single',
@@ -103,7 +117,7 @@ return [
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => env('LOG_LEVEL', 'debug'),
-        ],
+        ], 
 
         'null' => [
             'driver' => 'monolog',
