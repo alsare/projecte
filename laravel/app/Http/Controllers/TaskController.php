@@ -71,9 +71,4 @@ class TaskController extends Controller
         return \response( "Task with ID ${$id} has been deleted");
     }
 
-    public function user($id, $nom, $correu)
-    {
-        
-    }
-
 }

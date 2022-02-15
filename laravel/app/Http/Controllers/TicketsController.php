@@ -13,7 +13,8 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        //
+        $ticket = Tickets::all();
+        return \response($task);
     }
 
     /**
@@ -24,7 +25,12 @@ class TicketsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            'title' => 'required',
+            'desc' => 'required',
+            ]);
+            $task = Tickets::create($request->all());
+            return \response($task);
     }
 
     /**
@@ -35,7 +41,8 @@ class TicketsController extends Controller
      */
     public function show($id)
     {
-        //
+        $task = Tickets::findOrFail($id);
+        return \response($task);
     }
 
     /**
@@ -47,7 +54,9 @@ class TicketsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $task = Tickets::findOrFail($id)
+            ->update($request->all());
+        return \response($task);
     }
 
     /**
@@ -58,6 +67,7 @@ class TicketsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Tickets::destroy($id);
+        return \response( "Ticket with ID ${$id} has been deleted");
     }
 }
