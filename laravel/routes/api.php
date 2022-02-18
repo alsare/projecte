@@ -15,6 +15,9 @@ use App\Http\Controllers\TicketsController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/test',function(){
+    return "hehehello";
+});
 Route::apiResource('tasks', TaskController::class);
 Route::apiresource('user', UserController::class);
 Route::apiresource('tickets', TicketsController::class);

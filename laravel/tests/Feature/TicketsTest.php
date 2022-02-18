@@ -19,12 +19,46 @@ class TicketsTest extends TestCase
 
     //     $response->assertStatus(200);
     // }
-    public function becreated()
+    public function test_createdtickets()
     {
-        $response = $this->post('/tickets',[
-            'titol' => 'Test Titol',
-            'desc' => 'Test Desc'
+        $response = $this->post('/api/tickets',[
+             'titol' => 'Test',
+             'desc' => 'Test'
         ]);
         $response->assertStatus(201);
+        $content = $response->getContent();
+        $json = json_decode($content);
+        return $json ->id;
     }
+
+    /**
+     * @return void
+     * @depends  test_createdtickets($id)
+     */
+        public function seen($id)
+        {
+            $response = $this->GET('/api/tickets/{$id}');
+            $response->assertStatus(200);
+        }
+    /**
+     * @return void
+     * @depends  test_createdtickets($id)
+     */ 
+        public function borrar($id)
+        {
+            $response = $this->delete('/api/tickets/{$id}');
+            $response->assertStatus(200);
+        }
+    /**
+     * @return void
+     * @depends  test_createdtickets($id)
+     */
+        public function beupdated($id)
+        {
+            $response = $this->post('/api/tickets/{$id}' .$ticket -> $id,[
+                'titol' => 'TestA',
+                'desc' => 'TestA'
+            ]);
+            $response->assertStatus(201);
+        }
 }

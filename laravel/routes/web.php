@@ -33,6 +33,7 @@ use App\Http\Controllers\MailController;
 Route::get('mail/test', [MailController::class, 'test']);
 // Route::get('mail/test', 'App\Http\Controllers\MailController@test');
 
+
 use Illuminate\Http\Request;
 // ...
 Route::get('/', function (Request $request) {
