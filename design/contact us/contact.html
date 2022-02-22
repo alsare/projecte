@@ -11,7 +11,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/build/ol.js"></script>
-
+        <script src="keymaster.js"></script>
         <title>Contact Us</title>
     </head>
 <body>
@@ -26,7 +26,7 @@
             <h3>
                 Envia el teu missatge
             </h3>
-            <button href="#" class="button">Formulari de Contacte</button>
+            <a href="https://twitter.com" target="_blank" accesskey="f" class="button">Formulari de Contacte</a>
         </div>
     </section>
     <section class="showcase2">
@@ -91,17 +91,25 @@
         var x = document.getElementById("demo");
 
         function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
         }
 
         function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude;
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
         }
+        
+        
+        key('ctrl + alt + g', function(){
+            alert(coord)
+        });
+
+        
+
     </script>
 
     <section id="about">
