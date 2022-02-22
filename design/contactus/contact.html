@@ -22,6 +22,7 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
         <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+        <script src="keypress.js"></script>
 
         
         <title>Contact Us</title>
@@ -38,7 +39,7 @@
             <h3>
                 Envia el teu missatge
             </h3>
-            <button href="#" class="button">Formulari de Contacte</button>
+            <button class="button"><a href="https://en.puroland.jp/" accesskey="j">Formulari de Contacte</a></button>
         </div>
     </section>
     
@@ -54,6 +55,7 @@
         </div>
         <div id="map"></div>    
         <script>
+            var listener = new window.keypress.Listener();
             var map = L.map('map').setView([41.23127, 1.72868], 18);
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showposition);
@@ -70,7 +72,14 @@
 //                    L.latLng(lat, long)
 //                    ]
 //                    }).addTo(map);
+            listener.simple_combo("ctrl alt g", function() {
+                alert("la teva ubicació es\nLatitud "+lat+"\nLongitud "+long)
+            });
             }
+            
+            listener.simple_combo("ctrl alt c", function() {
+                map.panTo(new L.LatLng(41.23127, 1.72868, 18));
+            });
             var marker = new L.marker([41.23127, 1.72868]).addTo(map);
             marker._icon.classList.add("huechange");
             
