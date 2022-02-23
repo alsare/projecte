@@ -1,63 +1,41 @@
 {
-    "name": "laravel/laravel",
+    "name": "2daw/g06",
+    "description": "Projecte web",
+    "authors": [{
+       "name": "Alex Salado",
+       "email": "alsare@fp.insjoaquimmir.cat"
+    },{
+       "name": "Bruno Saldaña",
+       "email": "brsase@fp.insjoaquimmir.cat"
+    }],
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "require": {
-        "php": "^7.3|^8.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
-    },
-    "require-dev": {
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/breeze": "^1.7",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
+    "license": "copyleft",
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "autoload": {
+       "psr-4": {
+           "My\\": "library"
+       }
+    },
+    "require": {
+	"php": "^7.3",
+        "monolog/monolog": "2.x-dev",
+        "phpunit/phpunit": "9.5.x-dev",
+        "alrik11es/cowsayphp": "^1.2",
+        "phpmailer/phpmailer": "dev-master",
+        "rakit/validation": "dev-master",
+        "twig/twig": "3.x-dev"
+    },
+   "scripts": {
+       "hello": [
+           "php ./scripts/hello.php"
+       ],
+       "deps": [
+           "ls ./library",
+           "ls ./vendor"
+       ],
+       "tests": [
+           "./vendor/bin/phpunit tests"
+       ]
+   }
+
 }
