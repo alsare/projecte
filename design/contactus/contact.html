@@ -80,6 +80,23 @@
             listener.simple_combo("ctrl alt c", function() {
                 map.panTo(new L.LatLng(41.23127, 1.72868, 18));
             });
+            var set = true;
+            listener.simple_combo("ctrl alt q", function() {
+                if(set == true){
+                    listener.unregister_combo("ctrl alt c");
+                    listener.unregister_combo("ctrl alt g");
+                }
+                else{
+                    listener.simple_combo("ctrl alt g", function() {
+                        alert("la teva ubicació es\nLatitud "+lat+"\nLongitud "+long)
+                    });
+
+                    listener.simple_combo("ctrl alt c", function() {
+                        map.panTo(new L.LatLng(41.23127, 1.72868, 18));
+                    });
+                }
+                set=!set;
+            });
             var marker = new L.marker([41.23127, 1.72868]).addTo(map);
             marker._icon.classList.add("huechange");
             
