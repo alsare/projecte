@@ -2186,3 +2186,18 @@ Did you mean one of these?
 [2022-02-11 18:08:33] testing.INFO: Loading welcome page  
 [2022-02-14 16:21:56] testing.INFO: Loading welcome page  
 [2022-02-14 16:22:50] testing.INFO: Loading welcome page  
+[2022-03-02 17:52:56] local.ERROR: Too many arguments to "make:test" command, expected arguments "name". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments to \"make:test\" command, expected arguments \"name\". at /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Input/ArgvInput.php:193)
+[stacktrace]
+#0 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument()
+#1 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Input/ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#2 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Command/Command.php(257): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 /home/alsare/projecte/projecte/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#5 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Application.php(1015): Illuminate\\Console\\Command->run()
+#6 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#7 /home/alsare/projecte/projecte/laravel/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#8 /home/alsare/projecte/projecte/laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#9 /home/alsare/projecte/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#10 /home/alsare/projecte/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#11 {main}
+"} 

@@ -19,7 +19,7 @@ class TicketsTest extends TestCase
 
     //     $response->assertStatus(200);
     // }
-    public function test_createdtickets()
+    public function test_ApiPostTickets()
     {
         $response = $this->post('/api/tickets',[
              'titol' => 'Test',
@@ -33,29 +33,29 @@ class TicketsTest extends TestCase
 
     /**
      * @return void
-     * @depends  test_createdtickets($id)
+     * @depends  test_ApiPostTickets($id)
      */
-        public function seen($id)
+        public function test_ApiGetTickets($id)
         {
             $response = $this->GET('/api/tickets/{$id}');
             $response->assertStatus(200);
         }
     /**
      * @return void
-     * @depends  test_createdtickets($id)
+     * @depends  test_ApiPostTickets($id)
      */ 
-        public function borrar($id)
+        public function test_ApiDeleteTickets($id)
         {
             $response = $this->delete('/api/tickets/{$id}');
             $response->assertStatus(200);
         }
     /**
      * @return void
-     * @depends  test_createdtickets($id)
+     * @depends  test_ApiPostTickets($id)
      */
-        public function beupdated($id)
+        public function test_ApiPutTickets($id)
         {
-            $response = $this->post('/api/tickets/{$id}' .$ticket -> $id,[
+            $response = $this->put('/api/tickets/{$id}' .$ticket -> $id,[
                 'titol' => 'TestA',
                 'desc' => 'TestA'
             ]);

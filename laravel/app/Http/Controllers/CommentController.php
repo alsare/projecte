@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Comment;
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 
-class TicketsController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        $ticket = Tickets::all();
+        $comment = Comment::all();
         return \response($task);
     }
 
@@ -23,14 +24,24 @@ class TicketsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($tid, Request $request)
     {
-        $request -> validate([
-            'title' => 'required',
-            'desc' => 'required',
+        $ticket = Ticket::where('id',$tid)->first();
+        if($ticket!=null){
+            $request->validate([
+                'msg' => 'required||max:255'
             ]);
-            $task = Tickets::create($request->all());
-            return \response($task);
+
+            $comment = Comment::create([
+                'ticket_id' => $tid,
+                'author_id' => 1,
+                'msg' => $request->msg
+            ]);
+            return \response($comment,201);
+        }
+        else {
+            return \response(["tid" => "no existe"], 404);
+        }
     }
 
     /**
@@ -39,9 +50,9 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($tid, $id)
     {
-        $task = Tickets::findOrFail($id);
+        $comment = Comment::findOrFail($id);
         return \response($task);
     }
 
@@ -54,9 +65,8 @@ class TicketsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $task = Tickets::findOrFail($id)
-            ->update($request->all());
-        return \response("Ticket updated", 200);
+        Comment::findOrFail($id)->update($request->all());
+        return \response("Comment Updated", 200);
     }
 
     /**
@@ -65,9 +75,9 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($tid, $id)
     {
-        Tickets::destroy($id);
-        return \response( "Ticket with ID ${$id} has been deleted");
+        Comment::destroy($id)->where('ticket_id',$tid);
+        return \response("Comment with ID->${id}, has been deleted");
     }
 }
