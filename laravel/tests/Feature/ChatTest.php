@@ -15,7 +15,7 @@ class ChatTest extends TestCase
      */
     public function test_example()
     {
-        $response = $this->get('/');
+        $response = $this->get('/api');
 
         $response->assertStatus(200);
     }
@@ -23,12 +23,12 @@ class ChatTest extends TestCase
     public function store(Request $request)
     {
         $request->validate([
-            'autor_id'
-        ])
+            'autor_id',
+            'mensaje',
+            'id'
+        ]);
     }
 
-
-    }
 
     public function show($id){
     
