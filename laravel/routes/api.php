@@ -21,6 +21,7 @@ Route::get('/test',function(){
 Route::apiResource('tasks', TaskController::class);
 Route::apiresource('user', UserController::class);
 Route::apiresource('tickets', TicketsController::class);
+Route::apiresource('comment', TicketsController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
