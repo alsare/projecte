@@ -16,12 +16,12 @@ class CommentTest extends TestCase
      * @return void
      */
 
-    // public function test_ApiListComment()
-    // {
-    //     $tid = self::TICKET_ID;
-    //     $response = $this->get("/api/tickets/{$tid}/comments");
-    //     $response->assertStatus(200);
-    // }
+    public function test_ApiListComment()
+    {
+        $tid = self::TICKET_ID;
+        $response = $this->get("/api/tickets/{$tid}/comments");
+        $response->assertStatus(200);
+    }
 
     public function test_ApiPostComment()
     {
@@ -50,10 +50,10 @@ class CommentTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /**
-     * @return void
-     * @depends test_ApiPostComment
-     */
+    // /**
+    //  * @return void
+    //  * @depends test_ApiPostComment
+    //  */
     // public function test_ApiPutComment($id)
     // {
     //     $tid = self::TICKET_ID;
