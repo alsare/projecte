@@ -40,6 +40,7 @@ class TicketsTest extends TestCase
             $response = $this->GET('/api/tickets/{$id}');
             $response->assertStatus(200);
         }
+        
     /**
      * @return void
      * @depends  test_ApiPostTickets($id)
@@ -49,6 +50,7 @@ class TicketsTest extends TestCase
             $response = $this->delete('/api/tickets/{$id}');
             $response->assertStatus(200);
         }
+
     /**
      * @return void
      * @depends  test_ApiPostTickets($id)

@@ -2201,3 +2201,4 @@ Did you mean one of these?
 #10 /home/alsare/projecte/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
 #11 {main}
 "} 
+[2022-03-04 17:59:39] testing.INFO: Loading welcome page  

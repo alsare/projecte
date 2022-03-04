@@ -40,7 +40,7 @@ class CommentController extends Controller
             return \response($comment,201);
         }
         else {
-            return \response(["tid" => "no existe"], 404);
+            return \response(["tid" => "doesn't exist"], 404);
         }
     }
 

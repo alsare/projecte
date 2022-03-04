@@ -38,7 +38,6 @@ class CommentTest extends TestCase
         return $json->id;
     }
 
-
     /**
      * @return void
      * @depends test_ApiPostComment
@@ -63,7 +62,7 @@ class CommentTest extends TestCase
 
     //     $response->assertStatus(200);
     // }
-
+    
     /**
      * @return void
      * @depends test_ApiPostComment
