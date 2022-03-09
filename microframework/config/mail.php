@@ -21,4 +21,3 @@ return [
        "mail"      => "2daw.equip06@fp.insjoaquimmir.cat"
    ]
 ];
-?>
