@@ -117,27 +117,16 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-<<<<<<< HEAD
             'channels' => ['file', 'firephp', 'errorlog'],
             'ignore_exceptions' => false,
         ],
        
-=======
-            'channels' => ['file', /*'firephp',*/ 'errorlog'],
-            'ignore_exceptions' => false,
-        ],
-        
->>>>>>> origin/b1.1-bruno
         'file' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
         ],
-<<<<<<< HEAD
   
-=======
-
->>>>>>> origin/b1.1-bruno
         'firephp' => [
             'driver' => 'monolog',
             'handler' => Monolog\Handler\FirePHPHandler::class,
@@ -146,12 +135,6 @@ return [
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => env('LOG_LEVEL', 'debug'),
-<<<<<<< HEAD
         ],
     ]
-=======
-        ]
-    ],
-
->>>>>>> origin/b1.1-bruno
 ];

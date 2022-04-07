@@ -1,4 +1,6 @@
 <?php
+use App\Http\Controllers\FileController;
+ 
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -21,6 +23,7 @@ Route::get('/', function (Request $request) {
     $request->session()->flash('info', $message);
     return view('welcome');
 });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -44,3 +47,7 @@ Route::get('/', function (Request $request) {
    $request->session()->flash('info', $message);
    return view('welcome');
 });
+Route::resource('files', FileController::class)->middleware(['auth', 'role:3']);;
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

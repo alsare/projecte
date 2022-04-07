@@ -43,26 +43,14 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-<<<<<<< HEAD
-=======
-            'role_id' => 2 // Role "basic"
->>>>>>> origin/b1.1-bruno
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
-<<<<<<< HEAD
         
         $request->user()->sendEmailVerificationNotification();
         return redirect(RouteServiceProvider::HOME);
         
-=======
-
-        // Send confimation mail to user!!!
-        $request->user()->sendEmailVerificationNotification();
-
-        return redirect(RouteServiceProvider::HOME);
->>>>>>> origin/b1.1-bruno
     }
 }

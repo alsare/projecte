@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TicketsController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatAppController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
