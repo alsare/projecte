@@ -2204,3 +2204,43 @@ Did you mean one of these?
 [2022-03-04 17:59:39] testing.INFO: Loading welcome page  
 [2022-03-04 18:09:23] testing.INFO: Loading welcome page  
 [2022-03-04 18:10:25] testing.INFO: Loading welcome page  
+[2022-04-20 17:32:46] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:200)
+[stacktrace]
+#0 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->resolve()
+#1 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(112): Illuminate\\Log\\LogManager->get()
+#2 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(590): Illuminate\\Log\\LogManager->driver()
+#3 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(252): Illuminate\\Log\\LogManager->error()
+#4 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(366): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /home/brsase/Escriptori/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2022-04-20 17:32:46] laravel.ERROR: syntax error, unexpected '<<' (T_SL), expecting ']' {"exception":"[object] (ParseError(code: 0): syntax error, unexpected '<<' (T_SL), expecting ']' at /home/brsase/Escriptori/projecte/laravel/config/logging.php:120)
+[stacktrace]
+#0 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#1 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#2 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#3 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 /home/brsase/Escriptori/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2022-04-20 17:35:32] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:200)
+[stacktrace]
+#0 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->resolve()
+#1 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(112): Illuminate\\Log\\LogManager->get()
+#2 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(590): Illuminate\\Log\\LogManager->driver()
+#3 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(252): Illuminate\\Log\\LogManager->error()
+#4 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(366): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#6 /home/brsase/Escriptori/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2022-04-20 17:35:32] laravel.ERROR: syntax error, unexpected '<<' (T_SL), expecting ']' {"exception":"[object] (ParseError(code: 0): syntax error, unexpected '<<' (T_SL), expecting ']' at /home/brsase/Escriptori/projecte/laravel/config/logging.php:120)
+[stacktrace]
+#0 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#1 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(237): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#2 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith()
+#3 /home/brsase/Escriptori/projecte/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 /home/brsase/Escriptori/projecte/laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
