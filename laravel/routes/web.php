@@ -47,7 +47,7 @@ Route::get('/', function (Request $request) {
    $request->session()->flash('info', $message);
    return view('welcome');
 });
-Route::resource('files', FileController::class)->middleware(['auth', 'role:3']);;
+Route::resource('files', FileController::class)->middleware(['auth', 'role:3']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

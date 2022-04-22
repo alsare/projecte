@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Roles;
+use App\Models\Perms;
+use App\Models\Role_Perms;
+use App\Models\User;
 use App\Models\File;
 use Illuminate\Http\Request;
 
@@ -25,7 +28,19 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Roles::create([
+            'id' => $request-$idr,
+            'name' => $request-$name,
+        ]);
+        Perms::create([
+            'id' => $request-$idp,
+            'name' => $request-$name,
+            'desc' => $request-$desc,
+        ]);
+        Role_perms::create([
+            'role_id' => $request-$idr,
+            'perm_id' => $request-$idp,
+        ]);
     }
 
     /**
@@ -48,7 +63,9 @@ class RolesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('users')
+              ->where('id', $id)
+              ->update(['role_id' => $request-$role]);
     }
 
     /**

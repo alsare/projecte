@@ -25,8 +25,8 @@ Route::apiResource('tasks', TaskController::class);
 Route::apiresource('user', UserController::class);
 Route::apiresource('tickets', TicketsController::class);
 Route::apiresource('comment', TicketsController::class);
-Route::apiresource('roles', RolesController::class);
-Route::apiresource('usera', UserAdminController::class);
+Route::apiresource('roles', RolesController::class)->middleware(['auth', 'role:4']);
+Route::apiresource('usera', UserAdminController::class)->middleware(['auth', 'role:4']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

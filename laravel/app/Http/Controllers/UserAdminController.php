@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\File;
 use Illuminate\Http\Request;
 
-class UserAdmin extends Controller
+class UserAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -69,9 +69,7 @@ class UserAdmin extends Controller
      */
     public function show($id)
     {
-        $idf = DB::table('users')
-              ->where('id', $id)
-              ->update(['avatarid' => $file-$id]);
+        
     }
 
     /**
@@ -83,7 +81,26 @@ class UserAdmin extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $request->validate([
+            'upload' => "required|image|mimes:jpg,png,gif|max:2000"
+        ]);
+        $fileSize = $upload->getSize();
+        $filePath = $upload->storeAs(
+            'uploads',      // Path
+            $uploadName ,   // Filename
+            'public'        // Disk
+        );
+        if (\Storage::disk('public')->exists($filePath)) {
+            DB::table('users')
+              ->where('id', $file-$id)
+              ->update(['avatarid' => $id]);
+            
+              return redirect()->route('files.index')
+            ->with('success', 'File successfully updated');
+        } else{
+            return redirect()->route('files.edit')
+            ->with('error', 'File unsuccessfully updated');
+        }
     }
 
     /**
