@@ -5,6 +5,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ModeloController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +42,9 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::resource('files', FileController::class)->middleware(['auth', 'role:1']);
+Route::resource('files', FileController::class);
+Route::resource('categories', CategoryController::class);
+Route::resource('modelos', ModeloController::class);
+
+
 //Route::resource('files', FileController::class)->middleware(['auth', 'role.any:1,2,3,4']);
